@@ -26,7 +26,7 @@ public class B8Action {
 	@RequestMapping("/b8.action")
 	public String test(Map<String, Object> map, Customer customer) {
 		System.out.println("b8 ...");
-		customer.setCreatedTime(new Date());
+		customer.setCreateTime(new Date());
 		customerImpl.saveOrUpdate(customer.getId(), customer);
 		
 		Order order = new Order(customer.getId(), "订单", customer.getId());

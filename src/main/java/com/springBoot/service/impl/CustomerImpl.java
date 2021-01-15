@@ -1,19 +1,17 @@
 package com.springBoot.service.impl;
 
-import java.util.List;
-import java.util.Optional;
-
-import javax.annotation.Resource;
-
-import org.springframework.beans.BeanUtils;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.springBoot.dao.CustomerDao;
 import com.springBoot.dao.CustomerRepDao;
 import com.springBoot.dao.query.Customer2;
 import com.springBoot.entity.Customer;
 import com.springBoot.service.CustomerService;
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.annotation.Resource;
+import java.util.List;
+import java.util.Optional;
 
 @Transactional
 @Service
@@ -28,7 +26,17 @@ public class CustomerImpl implements CustomerService{
 	public int update13(String email, int id) {
 		return customerRepDao.update13(email, id);
 	}
+
+	@Override
+	public List query11(Integer age) throws Exception {
+		return customerDao.query11(age);
+	}
 	
+	@Override
+	public List query13(Integer age) throws Exception {
+		return customerDao.query13(age);
+	}
+
 	@Override
 	public List<Customer2> query12() {
 		return customerDao.query12();

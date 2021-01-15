@@ -11,7 +11,7 @@ public class Customer2 {
 	private Integer id;
 	private String lastName;
 
-	private String city;
+//	private String city;
 	private Date createTime;
 
 	public Date getCreateTime() {
@@ -41,11 +41,11 @@ public class Customer2 {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
-	}
+//	public String getCity() {
+//		return city;
+//	}
+//	public void setCity(String city) {
+//		this.city = city;
+//	}
     
 }

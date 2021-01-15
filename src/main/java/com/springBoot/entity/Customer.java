@@ -12,7 +12,7 @@ import javax.persistence.Transient;
 import org.springframework.data.domain.Persistable;
 import com.alibaba.fastjson.annotation.JSONField;
 
-@Table(name="jpa_customers")
+@Table(name="JPA_CUSTOMERS")
 @Entity
 //public class Customer {
 public class Customer implements Persistable<Object>{
@@ -24,7 +24,7 @@ public class Customer implements Persistable<Object>{
 	private Integer age;
 	private Integer addr_id;
 
-	private Date createdTime;
+	private Date createTime;
 	private Date birth;
 
 
@@ -97,14 +97,14 @@ public class Customer implements Persistable<Object>{
 		return "lastName: " + lastName + ", email: " + email;
 	}
 
-	@Column(name="createdTime")
+	@Column(name="create_time")
 	@Temporal(TemporalType.TIMESTAMP)
-    public Date getCreatedTime() {
-        return createdTime;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatedTime(Date createdTime) {
-        this.createdTime = createdTime;
+    public void setCreateTime(Date createdTime) {
+        this.createTime = createdTime;
     }
     @Temporal(TemporalType.TIMESTAMP)
     public Date getBirth() {

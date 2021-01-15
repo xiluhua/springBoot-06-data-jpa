@@ -18,16 +18,17 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 -- Table structure for jpa_cutomers
 -- ----------------------------
-DROP TABLE IF EXISTS `jpa_cutomers`;
-CREATE TABLE `jpa_cutomers` (
+CREATE TABLE `JPA_CUSTOMERS` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `age` int(11) NOT NULL,
   `birth` date DEFAULT NULL,
-  `CREATE_TIME` datetime NOT NULL,
+  `create_time` datetime NOT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `LAST_NAME` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `addr_id` int(10) DEFAULT NULL,
+  `createdTime` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of jpa_cutomers
@@ -37,14 +38,16 @@ INSERT INTO `jpa_cutomers` VALUES ('1', '35', '1998-06-10', '2020-11-02 14:07:21
 -- ----------------------------
 -- Table structure for jpa_persons
 -- ----------------------------
-DROP TABLE IF EXISTS `jpa_persons`;
-CREATE TABLE `jpa_persons` (
+
+CREATE TABLE `JPA_PERSONS` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `age` int(11) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `LAST_NAME` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+
+
 
 -- ----------------------------
 -- Records of jpa_persons
@@ -75,3 +78,10 @@ INSERT INTO `jpa_persons` VALUES ('24', '2', '5', '6');
 INSERT INTO `jpa_persons` VALUES ('25', '2', '5', '6');
 INSERT INTO `jpa_persons` VALUES ('26', '2', '5', '6');
 INSERT INTO `jpa_persons` VALUES ('27', '2', '5', '6');
+
+CREATE TABLE `JPA_ADDRESSES` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `address` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
